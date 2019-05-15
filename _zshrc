@@ -1,0 +1,78 @@
+# -- History
+
+HISTFILE=~/.histfile
+HISTSIZE=50000       # indicates how many commands from your history file are loaded into the shell’s memory
+SAVEHIST=25000       # indicates how many commands your history file can hold
+
+setopt extended_history       # Save each command’s beginning timestamp (in seconds since the epoch) and the duration (in seconds) to the history file
+setopt hist_expire_dups_first # If the internal history needs to be trimmed to add the current command line, this option will cause the oldest history event that has a duplicate to be lost before losing a unique event from the list.
+setopt hist_ignore_dups       # Do not enter command lines into the history list if they are duplicates of the previous event.
+setopt hist_ignore_space      # Remove command lines from the history list when the first character on the line is a space, or when one of the expanded aliases contains a leading space. 
+setopt hist_verify            # Whenever the user enters a line with history expansion, don’t execute the line directly; instead, perform history expansion and reload the line into the editing buffer.
+
+# -- ZSH Options (http://zsh.sourceforge.net/Doc/Release/Options.html)
+
+setopt autocd                 # If a command is issued that can’t be executed as a normal command, and the command is the name of a directory, perform the cd command to that directory.
+setopt nomatch                # If a pattern for filename generation has no matches, print an error, instead of leaving it unchanged in the argument list. This also applies to file expansion of an initial ‘~’ or ‘=’.
+setopt notify                 # Report the status of background jobs immediately, rather than waiting until just before printing a prompt.
+unsetopt beep                 # Disable: Beep on error in ZLE.
+
+bindkey -e                    # zle use emacs key bindings
+
+# -- Aliases (directory management)
+
+setopt auto_pushd        # Make cd push the old directory onto the directory stack.
+setopt pushd_ignore_dups # Don’t push multiple copies of the same directory onto the directory stack.
+
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+
+alias ls='ls --color=auto'
+alias l='ls -lah'
+alias ll='ls -lh'
+
+# -- Aliases (git)
+alias gst='git status'
+alias ga='git add'
+alias gcmsg='git commit -m'
+alias gco='git checkout'
+alias gd='git diff'
+alias gdca='git diff --cached'
+alias gf='git fetch'
+alias grb='git rebase'
+alias glo='git log --oneline --decorate'
+
+# -- pure prompt 
+fpath=( "$HOME/.zfunctions" $fpath )
+
+autoload -U promptinit; promptinit
+prompt pure
+
+# -- set up dircolors for ls
+eval $( dircolors -b $HOME/.dircolors )
+
+# -- cursor up and down search through history
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
+
+# -- warp directory
+wd() {
+    . ~/Software/wd/wd.sh
+}
+
+fpath=( "$HOME/Software/wd" $fpath )
+
+# The following lines were added by compinstall (must follow definition of fpath)
+zstyle :compinstall filename '/home/jose/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# zsh-syntax-highlighting (must be at the end)
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -1,0 +1,7 @@
+#! /bin/zsh
+. $HOME/.local/bin/icons
+
+# in my MBA, thermal_zone0 = Battery, thermal_zone1 = CPU
+CPU_TEMP=$(cat /sys/class/thermal/thermal_zone1/temp | column -s $'\t' -t | sed 's/\(.\)..$/.\1°C/')
+
+echo -e "${ICON_CPU}:${CPU_TEMP}"

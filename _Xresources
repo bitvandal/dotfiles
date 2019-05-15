@@ -1,0 +1,93 @@
+! Base16 Ocean
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+*foreground: #c0c5ce
+*background: #2b303b
+*cursorColor: #c0c5ce
+
+*color0: #2b303b
+*color1: #bf616a
+*color2: #a3be8c
+*color3: #ebcb8b
+*color4: #8fa1b3
+*color5: #b48ead
+*color6: #96b5b4
+*color7: #c0c5ce
+*color8: #65737e
+*color9: #bf616a
+*color10: #a3be8c
+*color11: #ebcb8b
+*color12: #8fa1b3
+*color13: #b48ead
+*color14: #96b5b4
+*color15: #eff1f5
+! Note: colors beyond 15 might not be loaded (for urxvt I use a custom perl extension to load them called xresources-256)
+*color16: #d08770
+*color17: #ab7967
+*color18: #343d46
+*color19: #4f5b66
+*color20: #a7adba
+*color21: #dfe1e8
+
+! ### Set default font ###
+*.font: xft:Source Code Pro:style=Regular:size=9, \
+        xft:Sans:style=Regular:size=9, \
+        xft:FreeSans:style=Regular:size=9, \
+        xft:FontAwesome:size=9, \
+        xft:Unifont:size=9
+*.boldFont: xft:Source Code Pro:style=Regular:size=9, \
+        xft:Sans:style=Regular:size=9, \
+        xft:FreeSerif:style=Regular:size=9, \
+        xft:FontAwesome:size=9, \
+        xft:Unifont
+
+! ### emacs options
+Emacs.font: Sans
+
+! ### rofi options ###
+! Font to use
+rofi.font:                           Source Code Pro 9
+! Color scheme for normal row
+rofi.color-normal:                   #2b303b, #c0c5ce, #2b303b, #bf616a, #2b303b
+! Color scheme for urgent row
+rofi.color-urgent:                   #2b303b, #d08770, #2b303b, #d08770, #2b303b
+! Color scheme for active row
+rofi.color-active:                   #2b303b, #a3be8c, #2b303b, #a3be8c, #2b303b
+! Color scheme window
+rofi.color-window:                   #2b303b, #343d46
+! Window opacity
+rofi.opacity:                        100
+! Terminal to use
+rofi.terminal:                       urxvtc
+! Ssh client to use
+rofi.ssh-client:                     ssh
+! Border width
+rofi.bw:                             4
+! Padding (inside border)
+rofi.padding:                        4
+! Location on screen (0 = center)
+rofi.location:                       0
+! X-offset relative to location
+rofi.xoffset:                        0
+! Y-offset relative to location
+rofi.yoffset:                        0
+! Window width (percentage)
+rofi.width:                          50
+
+! Set the cursor theme (get from https://www.gnome-look.org/p/999941/ and install it)
+! Xcursor.theme: Neutral++
+Xcursor.theme: Paper
+
+! ### URxvt options ###
+! set 256 color mode
+URxvt.termName: rxvt-256color
+URxvt.scrollBar: false
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
+URxvt.internalBorder: 8
+
+! urxvt perl extensions
+URxvt.perl-ext-common: default,xresources-256,font-size,selection-to-clipboard
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false

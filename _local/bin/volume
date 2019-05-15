@@ -1,0 +1,14 @@
+#! /bin/zsh
+. $HOME/.local/bin/icons
+
+# get the current pulseaudio volume
+VOLUME=$(pulsemixer --get-volume | awk '{print $1;}')
+
+# Adapt icon for high and low volume
+if [ $VOLUME -eq 0 ]; then
+  echo -e "$ICON_VOLUME_MUTE $VOLUME"
+elif [ $VOLUME -ge 50 ]; then
+  echo -e "$ICON_VOLUME_HIGH $VOLUME"
+else
+  echo -e "$ICON_VOLUME_LOW $VOLUME"
+fi

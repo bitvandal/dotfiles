@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# set wallpaper
+sh ~/.fehbg
+
+# merge settings from .Xresources into current settings
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
+# set initial cursor
+xsetroot -cursor_name left_ptr &
+
+# handle removable media such as CD or flash drives from userspace
+udiskie -T &
+
+# urxvt daemon
+urxvtd -q -o -f &
+
+# adjust color temperature according to the surroundings
+redshift &
+
+# notifications daemon
+dunst &
+
+# makes Menu key the Compose key, so that I can type spanish accents and the ñ character
+xmodmap -e "keycode 135 = Multi_key NoSymbol Multi_key"

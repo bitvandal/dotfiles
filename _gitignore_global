@@ -1,0 +1,10 @@
+# General
+*.log
+
+# VIM
+*.sw?
+
+# haskell
+*.hi
+*.o
+.stack-work/

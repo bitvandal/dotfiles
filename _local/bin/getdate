@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+cur_date_prefix=$(LC_ALL=en_EN.utf8 date "+%a %b")
+cur_day=$(LC_ALL=en_EN.utf8 date "+%d")
+cur_time=$(LC_ALL=en_EN.utf8 date "+%l:%M %p ")
+
+echo -e "${cur_date_prefix} ${cur_day#0} ${cur_time# }"
