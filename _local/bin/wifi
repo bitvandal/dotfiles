@@ -13,18 +13,25 @@ else
   # get the ssid
   WIFI_SSID=$(echo $WIFI_INFO | grep "SSID" | sed 's/\tSSID: //')
 
-  # get the signal strength
-  WIFI_SIGNAL=$(echo $WIFI_INFO | grep "signal" | sed 's/signal: //' | tr -d ' dBm')
+  # NOTE: getting the signal strength stopped working on my reinstall, and I am not so interested
+  #       in fixing it now, uncomment it when I get to fix it... I am not sure if is a problem of
+  #       drivers, because I need sudo to run "cat /proc/net/wireless" but I had not had this 
+  #       problem on a former installation, or in Debian 9 (with different hardware though).
+  #       In the former installation I used a different driver I think...
 
-  if (( $WIFI_SIGNAL > -50 )); then
-    WIFI_SIGNAL_PERCENT="100"
-  elif (( $WIFI_SIGNAL < -100 )); then
-    WIFI_SIGNAL_PERCENT="0"
-  else
-    WIFI_SIGNAL_PERCENT=$(echo $((2 * (100 + $WIFI_SIGNAL))))
-  fi
+  # get the signal strength
+  #WIFI_SIGNAL=$(echo $WIFI_INFO | grep "signal" | sed 's/signal: //' | tr -d ' dBm')
+
+  #if (( $WIFI_SIGNAL > -50 )); then
+  #  WIFI_SIGNAL_PERCENT="100"
+  #elif (( $WIFI_SIGNAL < -100 )); then
+  #  WIFI_SIGNAL_PERCENT="0"
+  #else
+  #  WIFI_SIGNAL_PERCENT=$(echo $((2 * (100 + $WIFI_SIGNAL))))
+  #fi
 
   # display all info
-  echo -e "${ICON_WIFI_CONNECTED} ${WIFI_SIGNAL_PERCENT}% | SSID:${WIFI_SSID}"
+  #echo -e "${ICON_WIFI_CONNECTED} ${WIFI_SIGNAL_PERCENT}% | SSID:${WIFI_SSID}"
+  echo -e "${ICON_WIFI_CONNECTED} ${WIFI_SSID}"
 
 fi
