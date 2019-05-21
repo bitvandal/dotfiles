@@ -42,7 +42,7 @@
         xft:Unifont
 
 ! ### emacs options
-Emacs.font: Sans
+Emacs.font: Source Code Pro
 
 ! ### rofi options ###
 ! Font to use
