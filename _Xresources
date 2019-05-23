@@ -30,19 +30,20 @@
 *color21: #dfe1e8
 
 ! ### Set default font ###
-*.font: xft:Source Code Pro:style=Regular:size=9, \
-        xft:Sans:style=Regular:size=9, \
-        xft:FreeSans:style=Regular:size=9, \
-        xft:FontAwesome:size=9, \
-        xft:Unifont:size=9
-*.boldFont: xft:Source Code Pro:style=Regular:size=9, \
-        xft:Sans:style=Regular:size=9, \
-        xft:FreeSerif:style=Regular:size=9, \
-        xft:FontAwesome:size=9, \
+*.font: xft:Source Code Pro:style=Regular:size=12, \
+        xft:Sans:style=Regular:size=12, \
+        xft:FreeSans:style=Regular:size=12, \
+        xft:FontAwesome:size=12, \
+        xft:Unifont:size=12
+*.boldFont: xft:Source Code Pro:style=Regular:size=12, \
+        xft:Sans:style=Regular:size=12, \
+        xft:FreeSerif:style=Regular:size=12, \
+        xft:FontAwesome:size=12, \
         xft:Unifont
 
 ! ### emacs options
-Emacs.font: Source Code Pro
+! Emacs.font: Source Code Pro
+Emacs.font: Iosevka
 
 ! ### rofi options ###
 ! Font to use
