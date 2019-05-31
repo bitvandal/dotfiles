@@ -2,9 +2,9 @@
 . $HOME/.local/bin/icons
 
 # Wifi device name
-WIFI_DEV="wlp3s0"
+WIFI_DEV="wlp2s0"
 
-WIFI_INFO=$(iw $WIFI_DEV link)
+WIFI_INFO=$(/sbin/iw $WIFI_DEV link)
 
 if [[ $WIFI_INFO = "Not connected." ]]; then
   # display wifi disconnected
