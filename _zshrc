@@ -44,6 +44,9 @@ alias gf='git fetch'
 alias grb='git rebase'
 alias glo='git log --oneline --decorate'
 
+# Aliases (misc)
+alias prettyjson='python -m json.tool'
+
 # -- pure prompt 
 fpath=( "$HOME/.zfunctions" $fpath )
 
@@ -73,6 +76,9 @@ zstyle :compinstall filename '/home/jose/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+# -- Path
+export PATH=$HOME/bin:$HOME/bin/ddp:$HOME/bin/dds:$HOME/.local/bin:/usr/local/bin:/snap/bin:$PATH
 
 # zsh-syntax-highlighting (must be at the end)
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

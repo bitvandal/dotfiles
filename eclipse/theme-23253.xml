@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<colorTheme id="23253" name="Base16 Ocean" modified="2014-01-06 09:43:26" author="Simon">
+    <searchResultIndication color="#343D46" />
+    <filteredSearchResultIndication color="#343D46" />
+    <occurrenceIndication color="#343D46" />
+    <writeOccurrenceIndication color="#343D46" />
+    <findScope color="#343D46" />
+    <deletionIndication color="#BF616A" />
+    <sourceHoverBackground color="#2B303B" />
+    <singleLineComment color="#65737E" italic="false" />
+    <multiLineComment color="#65737E" italic="false" />
+    <commentTaskTag color="#EBCB8B" italic="false" />
+    <javadoc color="#65737E" italic="false" />
+    <javadocLink color="#DFE1E8" italic="false" />
+    <javadocTag color="#EBCB8B" italic="false" />
+    <javadocKeyword color="#EBCB8B" italic="false" />
+    <class color="#EBCB8B" bold="false" underline="false" strikethrough="false" />
+    <interface color="#EBCB8B" />
+    <method color="#8FA1B3" />
+    <methodDeclaration color="#8FA1B3" />
+    <bracket color="#8FA1B3" />
+    <number color="#D08770" />
+    <string color="#A3BE8C" />
+    <operator color="#C0C5CE" />
+    <keyword color="#B48EAD" bold="false" />
+    <annotation color="#AB7967" />
+    <staticMethod color="#8FA1B3" />
+    <localVariable color="#BF616A" />
+    <localVariableDeclaration color="#B48EAD" />
+    <field color="#8FA1B3" />
+    <staticField color="#8FA1B3" />
+    <staticFinalField color="#8FA1B3" />
+    <deprecatedMember color="#BF616A" underline="false" strikethrough="true" />
+    <enum color="#96B5B4" />
+    <inheritedMethod color="#8FA1B3" />
+    <abstractMethod color="#8FA1B3" />
+    <parameterVariable color="#A3BE8C" />
+    <typeArgument color="#BF616A" />
+    <typeParameter color="#BF616A" />
+    <constant color="#EBCB8B" />
+    <background color="#2B303B" />
+    <currentLine color="#343D46" />
+    <foreground color="#EFF1F5" />
+    <lineNumber color="#EFF1F5" />
+    <selectionBackground color="#4F5B66" />
+    <selectionForeground color="#EFF1F5" />
+</colorTheme>
