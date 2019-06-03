@@ -60,7 +60,10 @@ myConfig = def {
 --myManageHook = manageDocks <+> (isFullscreen --> doFullFloat) <+> manageHook def
 myManageHook = manageDocks <+> manageHook def
 
-myLayoutHook = smartBorders . avoidStruts $ (layoutHook def ||| Grid)
+-- myLayoutHook = smartBorders . avoidStruts $ (layoutHook def ||| Grid)
+myLayoutHook =
+  avoidStruts ( tall ||| Mirror tall ||| noBorders Full ||| Grid )
+    where tall = Tall 1 ( 3 / 100 ) ( 1 / 2 )
 
 myEventHook = docksEventHook <+> fullscreenEventHook
 
