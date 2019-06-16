@@ -53,6 +53,8 @@ myConfig = def {
   , ((myModMask, xK_f), spawn "thunar")
   , ((myModMask, xK_F1), spawn "nmcli radio wifi off")
   , ((myModMask, xK_F2), spawn "nmcli radio wifi on")
+  , ((0, xF86XK_KbdBrightnessDown), spawn "kb-light.py -")
+  , ((0, xF86XK_KbdBrightnessUp), spawn "kb-light.py +")
   , ((myModMask .|. shiftMask, xK_l), spawn "xtrlock -b")
   ]
 
