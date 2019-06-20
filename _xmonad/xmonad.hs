@@ -9,6 +9,7 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Prompt.ConfirmPrompt
 import XMonad.Util.EZConfig (additionalKeys)
 import XMonad.Util.Run (safeSpawn, spawnPipe)
+import qualified XMonad.StackSet as W
 
 import Graphics.X11.ExtraTypes.XF86
 import System.Exit
@@ -30,6 +31,20 @@ myNormalBorderColor = "#2b303b"
 myFocusedBorderColor :: String
 myFocusedBorderColor = "#bf616a"
 
+myWorkspaces :: [String]
+myWorkspaces =
+  [ "\xf0f4" -- 1 java
+  , "\xf269" -- 2 www
+  , "\xf044" -- 3 text
+  , "\xf121" -- 4 code
+  , "\xf0b1" -- 5 work
+  , "\xf120" -- 6 ssh
+  , "\xf109" -- 7 more work
+  , "\xf0e0" -- 8 e-mail
+  , "\xf27a" -- 9 chat
+  , "\xf1bc" -- 0 music
+  ]
+
 -- Configuration
 myConfig = def {
     modMask = myModMask
@@ -37,6 +52,7 @@ myConfig = def {
   , borderWidth = myBorderWidth
   , normalBorderColor = myNormalBorderColor
   , focusedBorderColor = myFocusedBorderColor
+  , workspaces = myWorkspaces
   , manageHook = myManageHook
   , layoutHook = myLayoutHook
   , handleEventHook = myEventHook
@@ -54,6 +70,8 @@ myConfig = def {
   , ((myModMask, xK_F1), spawn "nmcli radio wifi off")
   , ((myModMask, xK_F2), spawn "nmcli radio wifi on")
   , ((myModMask .|. shiftMask, xK_l), spawn "xtrlock -b")
+  , ((myModMask, xK_0), windows $ W.greedyView "\xf1bc")
+  , ((myModMask .|. shiftMask, xK_0), windows $ W.shift "\xf1bc")
   ]
 
 -- hooks
