@@ -23,3 +23,7 @@ dunst &
 
 # makes Menu key the Compose key, so that I can type spanish accents and the ñ character
 xmodmap -e "keycode 135 = Multi_key NoSymbol Multi_key"
+
+# set up an icon tray
+trayer --edge top --align right --SetDockType true --SetPartialStrut true --alpha 0\
+ --expand true --widthtype request --transparent true --tint 0x2b303b --height 20 --monitor 1 &
