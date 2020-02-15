@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# set screen layout (script generated with arandr)
+sh ~/.local/bin/dual-monitor-arandr.sh
+
 # set wallpaper
 sh ~/.fehbg
 

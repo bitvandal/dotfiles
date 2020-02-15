@@ -9,7 +9,7 @@
 ;; found in modules/README.org.
 
 (doom! :completion
-       company           ; the ultimate code completion backend
+       (company +tmb)           ; the ultimate code completion backend
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        ivy               ; a search engine for love and life
