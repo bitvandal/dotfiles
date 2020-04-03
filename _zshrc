@@ -47,6 +47,9 @@ alias glo='git log --oneline --decorate'
 # Aliases (misc)
 alias prettyjson='python -m json.tool'
 
+# Aliases (fd)
+alias fd=fdfind
+
 # -- pure prompt 
 fpath=( "$HOME/.zfunctions" $fpath )
 
