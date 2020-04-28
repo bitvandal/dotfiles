@@ -81,5 +81,9 @@ compinit
 # Vulkan SDK
 source ~/VulkanSDK/1.1.114.0/setup-env.sh
 
+# Wine
+[[ -v WINEARCH ]] || export WINEARCH="win32"
+[[ -v WINEPREFIX ]] || export WINEPREFIX="$HOME/.wine"
+
 # zsh-syntax-highlighting (must be at the end)
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
