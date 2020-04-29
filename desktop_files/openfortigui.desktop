@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=openFortiGUI
+Comment=GUI for openfortivpn
+Icon=/usr/share/pixmaps/openfortigui.png
+Exec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY /usr/bin/openfortigui
+Terminal=false
+Categories=Network;Application;

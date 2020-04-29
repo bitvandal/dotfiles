@@ -1,0 +1,6 @@
+For creating the desktop launchers, copy those files into ~/.local/share/applications
+
+For the openfortigui, the original one, but that does not run as superuser is at:
+
+file:///home/jose/.local/share/applications/openfortigui.desktop
+
