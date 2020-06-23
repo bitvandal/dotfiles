@@ -1,0 +1,60 @@
+! Base16 Ocean
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+*foreground: #c0c5ce
+*background: #2b303b
+*cursorColor: #c0c5ce
+
+*color0: #2b303b
+*color1: #bf616a
+*color2: #a3be8c
+*color3: #ebcb8b
+*color4: #8fa1b3
+*color5: #b48ead
+*color6: #96b5b4
+*color7: #c0c5ce
+*color8: #65737e
+*color9: #bf616a
+*color10: #a3be8c
+*color11: #ebcb8b
+*color12: #8fa1b3
+*color13: #b48ead
+*color14: #96b5b4
+*color15: #eff1f5
+! Note: colors beyond 15 might not be loaded (for urxvt I use a custom perl extension to load them called xresources-256)
+*color16: #d08770
+*color17: #ab7967
+*color18: #343d46
+*color19: #4f5b66
+*color20: #a7adba
+*color21: #dfe1e8
+
+! ### Set default font ###
+*.font: xft:Source Code Pro:style=Regular:size=12, \
+        xft:Sans:style=Regular:size=12, \
+        xft:FreeSans:style=Regular:size=12, \
+        xft:FontAwesome:size=12, \
+        xft:Unifont:size=12
+*.boldFont: xft:Source Code Pro:style=Regular:size=12, \
+        xft:Sans:style=Regular:size=12, \
+        xft:FreeSerif:style=Regular:size=12, \
+        xft:FontAwesome:size=12, \
+        xft:Unifont
+
+! ### emacs options
+! Emacs.font: Source Code Pro
+! Emacs.font: Iosevka
+
+! ### URxvt options ###
+! set 256 color mode
+URxvt.termName: rxvt-256color
+URxvt.scrollBar: false
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
+URxvt.internalBorder: 8
+
+! urxvt perl extensions
+URxvt.perl-ext-common: default,xresources-256,font-size,selection-to-clipboard
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false

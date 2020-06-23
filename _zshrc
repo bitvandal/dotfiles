@@ -60,16 +60,12 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
 
-# nix-zsh-completions
-source $HOME/Software/nix-zsh-completions/nix-zsh-completions.plugin.zsh
-fpath=( "$HOME/Software/nix-zsh-completions" $fpath )
-
 # -- warp directory
 wd() {
-    . ~/Software/wd/wd.sh
+    . ~/work/repo/wd/wd.sh
 }
 
-fpath=( "$HOME/Software/wd" $fpath )
+fpath=( "$HOME/work/repo/wd" $fpath )
 
 # The following lines were added by compinstall (must follow definition of fpath)
 zstyle :compinstall filename '/home/jose/.zshrc'
@@ -78,8 +74,13 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# ghc
+path=( "/home/jose/work/haskell/setup/ghc/_build/stage1/bin" "/home/jose/.cabal/bin" $path )
+
+path=( "/home/jose/.local/bin" $path )
+
 # Vulkan SDK
-source ~/VulkanSDK/1.1.114.0/setup-env.sh
+source ~/work/code/VulkanSDK/1.2.135.0/setup-env.sh
 
 # Wine
 [[ -v WINEARCH ]] || export WINEARCH="win32"

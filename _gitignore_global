@@ -8,3 +8,11 @@
 *.hi
 *.o
 .stack-work/
+
+# gcc
+*.map
+*.h.gch
+*.a
+*.a.dbg
+*.so
+*.P
