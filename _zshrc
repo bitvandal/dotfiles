@@ -80,7 +80,7 @@ path=( "/home/jose/work/haskell/setup/ghc/_build/stage1/bin" "/home/jose/.cabal/
 path=( "/home/jose/.local/bin" $path )
 
 # Vulkan SDK
-source ~/work/code/VulkanSDK/1.2.135.0/setup-env.sh
+source ~/work/code/VulkanSDK/1.2.141.2/setup-env.sh
 
 # Wine
 [[ -v WINEARCH ]] || export WINEARCH="win32"
