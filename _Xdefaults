@@ -41,10 +41,6 @@
         xft:FontAwesome:size=12, \
         xft:Unifont
 
-! ### emacs options
-! Emacs.font: Source Code Pro
-! Emacs.font: Iosevka
-
 ! ### URxvt options ###
 ! set 256 color mode
 URxvt.termName: rxvt-256color
